@@ -10,6 +10,7 @@
     <section class="my-8">
       <h2 class="text-2xl font-bold mb-4">Featured Post</h2>
       <!-- Featured Posts Carousel -->
+      <carousel-component></carousel-component>
     </section>
 
     <!-- Recent Posts Section -->
@@ -22,34 +23,18 @@
 </template>
 
 <script>
+import CarouselComponent from '../components/CarouselComponent.vue';
 
 export default {
   data() {
     return {};
   },
   components: {
-    
+    CarouselComponent,
   },
 };
 </script>
 
-<style>
-#app {
-  height: 100%;
-}
+<style scoped>
 
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
 </style>
