@@ -162,7 +162,8 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.375rem; /* Rounded corners */
+    border-radius: 0.375rem;
+    /* Rounded corners */
 }
 
 .image-container:hover .overlay {

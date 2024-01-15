@@ -16,25 +16,36 @@
     <!-- Recent Posts Section -->
     <section class="my-8">
       <h2 class="text-2xl font-bold mb-4">Recent Posts</h2>
-      <!-- List of Recent Posts Goes Here -->
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>
+      <!-- List of Recent Posts using the updated HomeCardComponent -->
+      <home-card-component v-for="(post, index) in recentPosts" :key="index" :title="post.title"
+        :content="post.description" :image="post.image" :altText="post.title" :tags="post.tags"></home-card-component>
     </section>
   </div>
 </template>
 
 <script>
 import CarouselComponent from '../components/CarouselComponent.vue';
+import HomeCardComponent from '../components/HomeCardComponent.vue';
 
 export default {
   data() {
-    return {};
+    return {
+      recentPosts: [
+        {
+          title: 'Amazing Recipe 1',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          image: '../src/assets/recipe1.jpg',
+          tags: ['recipe', 'cooking', 'delicious'],
+        },
+        // Add more placeholder posts as needed
+      ],
+    };
   },
   components: {
     CarouselComponent,
+    HomeCardComponent,
   },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
