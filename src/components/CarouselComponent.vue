@@ -17,60 +17,60 @@
 export default {
     data() {
         return {
-            posts: [
-            {
+        posts: [
+        {
           title: 'Delicious Dish 1',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food1.jpg',
         },
         {
           title: 'Delicious Dish 2',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food2.jpg',
         },
         {
           title: 'Delicious Dish 3',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food3.jpg',
         },
         {
           title: 'Delicious Dish 4',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food4.jpg',
         },
         {
           title: 'Delicious Dish 5',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food5.jpg',
         },
         {
           title: 'Delicious Dish 6',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food6.jpg',
         },
         {
           title: 'Delicious Dish 7',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food7.jpg',
         },
         {
           title: 'Delicious Dish 8',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food8.jpg',
         },
         {
           title: 'Delicious Dish 9',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food9.jpg',
         },
         {
           title: 'Delicious Dish 10',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/blog_logo.png',
+          image: '../src/assets/food10.jpg',
         },
             ],
             currentIndex: 0,
-            itemsPerPage: 7, // Number of items to display per page
+            itemsPerPage: 5, // Number of items to display per page
         };
     },
     computed: {

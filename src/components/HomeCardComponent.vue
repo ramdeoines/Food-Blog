@@ -1,5 +1,3 @@
-<!-- src/components/HomeCardComponent.vue -->
-
 <template>
   <div class="max-w-full bg-white rounded-lg overflow-hidden shadow-md flex">
     <img class="w-1/3" :src="image" :alt="altText">
