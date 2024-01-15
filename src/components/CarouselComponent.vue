@@ -1,14 +1,17 @@
 <template>
     <div class="carousel">
-        <button @click="prev" class="carousel-btn left">&#8249;</button>
         <div class="carousel-inner">
             <div v-for="(post, index) in visiblePosts" :key="index" class="carousel-item">
-                <!-- Display your post content here -->
-                <img :src="post.image" alt="Post Image" class="w-full h-full object-cover rounded-md mb-4">
-                <h3 class="text-lg font-semibold">{{ post.title }}</h3>
-                <p>{{ post.description }}</p>
+                <div class="image-container">
+                    <img :src="post.image" alt="Post Image" class="w-full h-full object-cover rounded-md mb-4">
+                    <div class="overlay">
+                        <h3 class="text-lg font-semibold">{{ post.title }}</h3>
+                        <p>{{ post.description }}</p>
+                    </div>
+                </div>
             </div>
         </div>
+        <button @click="prev" class="carousel-btn left">&#8249;</button>
         <button @click="next" class="carousel-btn right">&#8250;</button>
     </div>
 </template>
@@ -17,57 +20,57 @@
 export default {
     data() {
         return {
-        posts: [
-        {
-          title: 'Delicious Dish 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food1.jpg',
-        },
-        {
-          title: 'Delicious Dish 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food2.jpg',
-        },
-        {
-          title: 'Delicious Dish 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food3.jpg',
-        },
-        {
-          title: 'Delicious Dish 4',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food4.jpg',
-        },
-        {
-          title: 'Delicious Dish 5',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food5.jpg',
-        },
-        {
-          title: 'Delicious Dish 6',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food6.jpg',
-        },
-        {
-          title: 'Delicious Dish 7',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food7.jpg',
-        },
-        {
-          title: 'Delicious Dish 8',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food8.jpg',
-        },
-        {
-          title: 'Delicious Dish 9',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food9.jpg',
-        },
-        {
-          title: 'Delicious Dish 10',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          image: '../src/assets/food10.jpg',
-        },
+            posts: [
+                {
+                    title: 'Delicious Dish 1',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food1.jpg',
+                },
+                {
+                    title: 'Delicious Dish 2',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food2.jpg',
+                },
+                {
+                    title: 'Delicious Dish 3',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food3.jpg',
+                },
+                {
+                    title: 'Delicious Dish 4',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food4.jpg',
+                },
+                {
+                    title: 'Delicious Dish 5',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food5.jpg',
+                },
+                {
+                    title: 'Delicious Dish 6',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food6.jpg',
+                },
+                {
+                    title: 'Delicious Dish 7',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food7.jpg',
+                },
+                {
+                    title: 'Delicious Dish 8',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food8.jpg',
+                },
+                {
+                    title: 'Delicious Dish 9',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food9.jpg',
+                },
+                {
+                    title: 'Delicious Dish 10',
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    image: '../src/assets/food10.jpg',
+                },
             ],
             currentIndex: 0,
             itemsPerPage: 5, // Number of items to display per page
@@ -82,19 +85,21 @@ export default {
     },
     methods: {
         next() {
-            if (this.currentIndex < this.posts.length - this.itemsPerPage) {
-                this.currentIndex += this.itemsPerPage;
+            this.currentIndex += this.itemsPerPage;
+            if (this.currentIndex >= this.posts.length) {
+                this.currentIndex = 0; // Loop back to the first item
             }
         },
         prev() {
-            if (this.currentIndex > 0) {
-                this.currentIndex -= this.itemsPerPage;
+            this.currentIndex -= this.itemsPerPage;
+            if (this.currentIndex < 0) {
+                this.currentIndex = this.posts.length - this.itemsPerPage; // Loop back to the last item
             }
         },
     },
 };
 </script>
-  
+
 <style scoped>
 /* Add Tailwind CSS styles specific to your carousel */
 .carousel {
@@ -135,5 +140,32 @@ export default {
 .carousel-btn.right {
     right: 10px;
 }
+
+/* Overlay Styles */
+.image-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust the overlay background color and opacity as needed */
+    color: #fff;
+    /* Adjust the text color as needed */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.375rem; /* Rounded corners */
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
 </style>
-  

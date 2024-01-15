@@ -8,7 +8,7 @@
 
     <!-- Featured Posts Section -->
     <section class="my-8">
-      <h2 class="text-2xl font-bold mb-4">Featured Post</h2>
+      <h2 class="text-2xl font-bold mb-4">Featured Posts</h2>
       <!-- Featured Posts Carousel -->
       <carousel-component></carousel-component>
     </section>
