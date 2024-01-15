@@ -1,13 +1,11 @@
-<!-- BlogsView.vue -->
-
 <template>
   <div class="container mx-auto my-8 mb-4 mt-4">
     <h1 class="text-4xl font-bold mb-4 mt-4">Blogs</h1>
 
     <!-- Blog posts or featured content section -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Use CardComponent for each blog post -->
-      <CardComponent
+      <!-- Use BlogsCardComponent for each blog post -->
+      <BlogsCardComponent
         v-for="(blog, index) in blogPosts"
         :key="index"
         :title="blog.title"
@@ -21,11 +19,11 @@
 </template>
 
 <script>
-import CardComponent from '@/components/CardComponent.vue';
+import BlogsCardComponent from '@/components/BlogsCardComponent.vue';
 
 export default {
   components: {
-    CardComponent
+    BlogsCardComponent
   },
   data() {
     return {

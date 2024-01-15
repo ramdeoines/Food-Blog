@@ -5,7 +5,7 @@ import {
 
 import HomeView from '@/views/HomeView.vue';
 import BlogsView from '@/views/BlogsView.vue';
-import DetailsView from '@/views/DetailsView.vue';
+// import DetailsView from '@/views/DetailsView.vue';
 import AboutView from '@/views/AboutView.vue';
 
 const routes = [
@@ -19,11 +19,11 @@ const routes = [
       name: 'BlogsView',
       component: BlogsView,
   },
-  {
-      path: '/details',
-      name: 'DetailsView',
-      component: DetailsView,
-  },
+  // {
+  //     path: '/details',
+  //     name: 'DetailsView',
+  //     component: DetailsView,
+  // },
   {
       path: '/about',
       name: 'AboutView',

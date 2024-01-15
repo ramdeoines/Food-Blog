@@ -19,9 +19,9 @@
         <router-link to="/blogs" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">
           Blogs
         </router-link>
-        <router-link to="/details" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">
+        <!-- <router-link to="/details" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">
           Details
-        </router-link>
+        </router-link> -->
         <router-link to="/about" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">
           About
         </router-link>
