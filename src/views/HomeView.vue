@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- Header Section -->
-    <header class="bg-teal-900 text-white p-4">
+    <header class="bg-lime-700 text-white p-4">
       <h1 class="text-4xl font-bold">Tasty Tales</h1>
-      <p class="text-lg">Exploring the world of delicious food</p>
+      <p class="text-lg font-semibold">Exploring the world of delicious food</p>
     </header>
 
     <!-- Featured Posts Section -->

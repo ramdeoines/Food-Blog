@@ -223,4 +223,12 @@ export default {
 .image-container:hover .overlay {
     opacity: 1;
 }
+
+@media screen and (max-width: 768px) {
+    .carousel-item {
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+    }
+}
 </style>
