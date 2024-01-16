@@ -211,8 +211,16 @@ export default {
     /* Remove button border */
     border-radius: 0;
     /* Rectangular overlay */
+    transition: background-color 0.3s ease;
+    /* Add transition for smoother effect */
+}
+
+.overlay-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Darker overlay on hover */
 }
 
 .image-container:hover .overlay {
     opacity: 1;
-}</style>
+}
+</style>

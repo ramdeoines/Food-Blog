@@ -1,15 +1,13 @@
 <template>
-
-  <div id="app">
+  <div id="app" class="bg-zinc-200">
     <HeaderComponent />
 
     <div class="mt-32 mb-12">
       <RouterView />
     </div>
-    
+
     <FooterComponent />
   </div>
-
 </template>
 
 <script>
@@ -26,6 +24,4 @@ export default {
 
 </script>
 
-<style>
-
-</style>
+<style></style>
