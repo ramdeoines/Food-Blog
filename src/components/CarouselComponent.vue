@@ -1,18 +1,22 @@
 <template>
-    <div class="carousel">
-        <div class="carousel-inner">
-            <div v-for="(post, index) in visiblePosts" :key="index" class="carousel-item">
-                <div class="image-container">
-                    <img :src="post.image" alt="Post Image" class="w-full h-full object-cover rounded-md mb-4">
-                    <div class="overlay">
-                        <h3 class="text-lg font-semibold">{{ post.title }}</h3>
-                        <p>{{ post.description }}</p>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div v-for="(post, index) in visiblePosts" :key="index" class="carousel-item">
+                    <div class="image-container">
+                        <img :src="post.image" alt="Post Image" class="w-full h-full object-cover rounded-md mb-4">
+                        <div class="overlay">
+                            <h3 class="text-lg font-semibold">{{ post.title }}</h3>
+                            <p>{{ post.description }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <button @click="prev" class="carousel-btn left">&#8249;</button>
-        <button @click="next" class="carousel-btn right">&#8250;</button>
+    </div>
+    <div class="overlay-btn-container">
+        <button @click="prev" class="carousel-btn left overlay-btn">&#8249;</button>
+        <button @click="next" class="carousel-btn right overlay-btn">&#8250;</button>
     </div>
 </template>
   
@@ -105,7 +109,12 @@ export default {
 .carousel {
     position: relative;
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
+    /* Enable horizontal scrolling for small screens */
+    justify-content: center;
+    /* Center the carousel content */
+    flex-wrap: nowrap;
+    /* Prevent items from wrapping to the next line */
 }
 
 .carousel-inner {
@@ -116,10 +125,21 @@ export default {
 
 .carousel-item {
     flex: 0 0 auto;
-    width: 300px;
-    /* Adjust the width as needed */
+    width: 80%;
+    /* Adjust the width to take 80% of the container */
+    max-width: 300px;
+    /* Set a maximum width for responsiveness */
     margin-right: 16px;
     /* Adjust the margin between items */
+}
+
+.carousel-item img {
+    max-width: 100%;
+    /* Ensure images scale with the width of their container */
+    height: auto;
+    /* Maintain the aspect ratio */
+    display: block;
+    /* Remove any residual bottom spacing */
 }
 
 .carousel-btn {
@@ -131,6 +151,7 @@ export default {
     font-size: 2rem;
     color: #333;
     cursor: pointer;
+    z-index: 2;
 }
 
 .carousel-btn.left {
@@ -166,7 +187,32 @@ export default {
     /* Rounded corners */
 }
 
+.overlay-btn-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    /* Adjust padding for better visibility */
+}
+
+.overlay-btn {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 3;
+    /* Ensure the overlay is above the carousel content */
+    padding: 8px;
+    /* Add padding for better visibility */
+    border: none;
+    /* Remove button border */
+    border-radius: 0;
+    /* Rectangular overlay */
+}
+
 .image-container:hover .overlay {
     opacity: 1;
-}
-</style>
+}</style>

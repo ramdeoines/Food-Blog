@@ -34,10 +34,21 @@ export default {
         {
           title: 'Amazing Recipe 1',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-          image: '../src/assets/recipe1.jpg',
+          image: '../src/assets/home1.jpg',
           tags: ['recipe', 'cooking', 'delicious'],
         },
-        // Add more placeholder posts as needed
+        {
+          title: 'Amazing Recipe 2',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          image: '../src/assets/home2.jpg',
+          tags: ['recipe', 'cooking', 'delicious'],
+        },
+        {
+          title: 'Amazing Recipe 3',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          image: '../src/assets/home3.png',
+          tags: ['recipe', 'cooking', 'delicious'],
+        },
       ],
     };
   },
