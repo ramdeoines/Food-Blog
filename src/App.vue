@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-zinc-200">
+  <div id="app" class="bg-green-50">
     <HeaderComponent />
 
     <div class="mt-32 mb-12">

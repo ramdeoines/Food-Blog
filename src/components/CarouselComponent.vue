@@ -1,8 +1,8 @@
 <template>
     <div class="carousel-container relative">
         <div class="carousel">
-            <div class="carousel-inner">
-                <div v-for="(post, index) in visiblePosts" :key="index" class="carousel-item">
+            <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * itemWidth}px)` }">
+                <div v-for="(post, index) in posts" :key="index" class="carousel-item">
                     <div class="image-container">
                         <img :src="post.image" alt="Post Image" class="w-full h-full object-cover rounded-md mb-4">
                         <div class="overlay">
@@ -77,7 +77,7 @@ export default {
                 },
             ],
             currentIndex: 0,
-            itemsPerPage: 5, // Number of items to display per page
+            itemWidth: 0,
         };
     },
     computed: {
@@ -87,17 +87,21 @@ export default {
             return this.posts.slice(start, end);
         },
     },
+    mounted() {
+        // Calculate the width of a single item based on the container width
+        this.itemWidth = this.$el.clientWidth;
+    },
     methods: {
         next() {
-            this.currentIndex += this.itemsPerPage;
+            this.currentIndex++;
             if (this.currentIndex >= this.posts.length) {
                 this.currentIndex = 0; // Loop back to the first item
             }
         },
         prev() {
-            this.currentIndex -= this.itemsPerPage;
+            this.currentIndex--;
             if (this.currentIndex < 0) {
-                this.currentIndex = this.posts.length - this.itemsPerPage; // Loop back to the last item
+                this.currentIndex = this.posts.length - 1; // Loop back to the last item
             }
         },
     },
@@ -106,41 +110,33 @@ export default {
 
 <style scoped>
 /* Add Tailwind CSS styles specific to your carousel */
+.carousel-container {
+  max-width: 800px; /* Set your desired maximum width */
+  margin: 0 auto; /* Center the carousel */
+}
+
 .carousel {
-    position: relative;
-    display: flex;
-    overflow-x: hidden;
-    /* Enable horizontal scrolling for small screens */
-    justify-content: center;
-    /* Center the carousel content */
-    flex-wrap: nowrap;
-    /* Prevent items from wrapping to the next line */
+  position: relative;
+  overflow: hidden;
 }
 
 .carousel-inner {
-    display: flex;
-    transition: transform 0.3s ease;
-    /* Add smooth transition effect */
+  display: flex;
+  transition: transform 1s ease; /* Adjust duration as needed */
 }
 
 .carousel-item {
-    flex: 0 0 auto;
-    width: 80%;
-    /* Adjust the width to take 80% of the container */
-    max-width: 300px;
-    /* Set a maximum width for responsiveness */
-    margin-right: 16px;
-    /* Adjust the margin between items */
+  flex: 0 0 auto;
+  width: 100%; /* Each item takes the full width of the container */
+  max-width: 100%; /* Ensure it's responsive */
+  margin-right: 16px;
 }
 
 .carousel-item img {
     width: 100%;
-    max-width: 100%;
-    /* Ensure images scale with the width of their container */
-    height: auto;
-    /* Maintain the aspect ratio */
-    display: block;
-    /* Remove any residual bottom spacing */
+    max-width: 50%; /* Ensure images scale with the width of their container */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any residual bottom spacing */
 }
 
 .carousel-btn {
@@ -166,6 +162,11 @@ export default {
 /* Overlay Styles */
 .image-container {
     position: relative;
+    display:flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: auto; /* Ensure the container takes the full height of the image */
+    width: auto;
 }
 
 .overlay {
@@ -173,21 +174,16 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%;
-    /* Set the height to 50% for bottom half overlay */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
-    /* Adjust the overlay background color and opacity as needed */
-    color: #fff;
-    /* Adjust the text color as needed */
-    opacity: 1;
-    /* Set opacity to 1 to make the overlay always visible */
+    height: 50%; /* Set the height to 50% for bottom half overlay */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%); /* Adjust the overlay background color and opacity as needed */
+    color: #fff; /* Adjust the text color as needed */
+    opacity: 1; /* Set opacity to 1 to make the overlay always visible */
     transition: opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0.375rem;
-    /* Rounded corners */
+    border-radius: 0.375rem; /* Rounded corners */
 }
 
 .overlay-btn-container {
@@ -197,8 +193,7 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 20px;
-    /* Adjust padding for better visibility */
+    padding: 0 20px; /* Adjust padding for better visibility */
 }
 
 .overlay-btn {
@@ -206,21 +201,15 @@ export default {
     color: #fff;
     font-size: 2rem;
     cursor: pointer;
-    z-index: 3;
-    /* Ensure the overlay is above the carousel content */
-    padding: 8px;
-    /* Add padding for better visibility */
-    border: none;
-    /* Remove button border */
-    border-radius: 0;
-    /* Rectangular overlay */
-    transition: background-color 0.3s ease;
-    /* Add transition for smoother effect */
+    z-index: 3; /* Ensure the overlay is above the carousel content */
+    padding: 8px; /* Add padding for better visibility */
+    border: none; /* Remove button border */
+    border-radius: 0; /* Rectangular overlay */
+    transition: background-color 0.3s ease; /* Add transition for smoother effect */
 }
 
 .overlay-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    /* Darker overlay on hover */
+    background-color: rgba(0, 0, 0, 0.8); /* Darker overlay on hover */
 }
 
 .image-container:hover .overlay {
