@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel-container">
+    <div class="carousel-container relative">
         <div class="carousel">
             <div class="carousel-inner">
                 <div v-for="(post, index) in visiblePosts" :key="index" class="carousel-item">
@@ -13,10 +13,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="overlay-btn-container">
-        <button @click="prev" class="carousel-btn left overlay-btn">&#8249;</button>
-        <button @click="next" class="carousel-btn right overlay-btn">&#8250;</button>
+        <div class="overlay-btn-container">
+            <button @click="prev" class="carousel-btn left overlay-btn">&#8249;</button>
+            <button @click="next" class="carousel-btn right overlay-btn">&#8250;</button>
+        </div>
     </div>
 </template>
   
@@ -109,7 +109,7 @@ export default {
 .carousel {
     position: relative;
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     /* Enable horizontal scrolling for small screens */
     justify-content: center;
     /* Center the carousel content */
@@ -134,6 +134,7 @@ export default {
 }
 
 .carousel-item img {
+    width: 100%;
     max-width: 100%;
     /* Ensure images scale with the width of their container */
     height: auto;
@@ -169,15 +170,17 @@ export default {
 
 .overlay {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    height: 50%;
+    /* Set the height to 50% for bottom half overlay */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
     /* Adjust the overlay background color and opacity as needed */
     color: #fff;
     /* Adjust the text color as needed */
-    opacity: 0;
+    opacity: 1;
+    /* Set opacity to 1 to make the overlay always visible */
     transition: opacity 0.3s ease;
     display: flex;
     flex-direction: column;
