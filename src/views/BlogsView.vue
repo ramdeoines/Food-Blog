@@ -24,70 +24,70 @@ export default {
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog1.jpg',
+          image: '/placeholders/blog1.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog2.jpg',
+          image: '/placeholders/blog2.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog3.jpg',
+          image: '/placeholders/blog3.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog4.jpg',
+          image: '/placeholders/blog4.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog5.jpg',
+          image: '/placeholders/blog5.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog6.jpg',
+          image: '/placeholders/blog6.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog7.jpg',
+          image: '/placeholders/blog7.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog8.jpg',
+          image: '/placeholders/blog8.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog9.jpg',
+          image: '/placeholders/blog9.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         },
         {
           title: 'Title',
           content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '../../public/placeholders/blog10.jpg',
+          image: '/placeholders/blog10.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
         }
