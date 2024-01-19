@@ -111,7 +111,7 @@ export default {
 <style scoped>
 /* Add Tailwind CSS styles specific to your carousel */
 .carousel-container {
-  max-width: 800px; /* Set your desired maximum width */
+  max-width: 77%; /* Set your desired maximum width */
   margin: 0 auto; /* Center the carousel */
 }
 
