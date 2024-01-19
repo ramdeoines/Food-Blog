@@ -1,21 +1,21 @@
 <template>
   <div>
     <!-- Header Section -->
-    <header class="bg-lime-700 text-white p-4">
+    <header class="p-4">
       <h1 class="text-4xl font-bold">Tasty Tales</h1>
       <p class="text-lg font-semibold">Exploring the world of delicious food</p>
     </header>
 
     <!-- Featured Posts Section -->
     <section class="my-8">
-      <h2 class="text-2xl font-bold mb-4 ml-14">Featured Posts</h2>
+      <h2 class="text-2xl font-bold mb-4 ml-6">Featured Posts</h2>
       <!-- Featured Posts Carousel -->
       <carousel-component></carousel-component>
     </section>
 
     <!-- Recent Posts Section -->
     <section class="my-8">
-      <h2 class="text-2xl font-bold mb-4 ml-12">Recent Posts</h2>
+      <h2 class="text-2xl font-bold mb-4 ml-6">Recent Posts</h2>
       <!-- List of Recent Posts using the updated HomeCardComponent -->
       <home-card-component v-for="(post, index) in recentPosts" :key="index" :title="post.title"
         :content="post.description" :image="post.image" :altText="post.title" :tags="post.tags"></home-card-component>

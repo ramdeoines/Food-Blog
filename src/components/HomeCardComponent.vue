@@ -1,14 +1,12 @@
 <template>
   <div class="flex justify-center">
-    <div class="max-w-full bg-white rounded-lg overflow-hidden shadow-md my-4 mx-2 sm:mx-4 md:mx-8 lg:mx-10 xl:mx-12 flex">
-      <img class="w-1/3 h-full object-cover object-left" :src="image" :alt="altText">
-      <div class="w-2/3 px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{ title }}</div>
-        <p class="text-gray-700 text-base">{{ content }}</p>
-        <div class="px-6 pt-4 pb-2">
-          <span v-for="tag in tags" :key="tag"
-            class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ tag
-            }}</span>
+    <div class="card-container">
+      <img :src="image" :alt="altText" class="card-image">
+      <div class="card-content">
+        <div class="card-title">{{ title }}</div>
+        <p class="card-text">{{ content }}</p>
+        <div class="card-tags">
+          <span v-for="tag in tags" :key="tag" class="card-tag">{{ tag }}</span>
         </div>
       </div>
     </div>
@@ -31,5 +29,71 @@ export default {
 /* Center the card horizontally */
 .flex {
   justify-content: center;
+}
+
+/* Card Styles */
+.card-container {
+  max-width: 70%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin: 1%;
+}
+
+.card-image {
+  flex: 1;
+  object-fit: cover;
+  object-position: left;
+  width: 100%;
+  max-height: 200px;
+}
+
+.card-content {
+  flex: 2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-tag {
+  background-color: #f2f2f2;
+  color: #555;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+/* Media Query for Small Screens */
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    max-width: 100%;
+    margin: 2% 0;
+  }
+
+  .card-image {
+    max-height: 100%; /* Adjusted for responsiveness */
+  }
 }
 </style>
