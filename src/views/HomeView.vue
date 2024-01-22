@@ -8,16 +8,16 @@
 
     <!-- Featured Posts Section -->
     <section class="my-8">
-      <h2 class="text-2xl font-bold mb-4 ml-6">Featured Posts</h2>
+      <h2 class="text-2xl font-bold mb-4">Featured Posts</h2>
       <!-- Featured Posts Carousel -->
       <carousel-component></carousel-component>
     </section>
 
     <!-- Recent Posts Section -->
     <section class="my-8">
-      <h2 class="text-2xl font-bold mb-4 ml-6">Recent Posts</h2>
+      <h2 class="text-2xl font-bold mb-4">Recent Posts</h2>
       <!-- List of Recent Posts using the updated HomeCardComponent -->
-      <home-card-component v-for="(post, index) in recentPosts" :key="index" :title="post.title"
+      <home-card-component class="mb-4" v-for="(post, index) in recentPosts" :key="index" :title="post.title"
         :content="post.description" :image="post.image" :altText="post.title" :tags="post.tags"></home-card-component>
     </section>
   </div>

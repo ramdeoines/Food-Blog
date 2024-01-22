@@ -1,5 +1,4 @@
 <template>
-  <div class="flex justify-center">
     <div class="card-container">
       <img :src="image" :alt="altText" class="card-image">
       <div class="card-content">
@@ -10,7 +9,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -27,19 +25,19 @@ export default {
 
 <style scoped>
 /* Center the card horizontally */
-.flex {
+/* .flex {
   justify-content: center;
-}
+} */
 
 /* Card Styles */
 .card-container {
-  max-width: 70%;
+  max-width: 100%;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
-  margin: 1%;
+  /* margin: 1%; */
 }
 
 .card-image {

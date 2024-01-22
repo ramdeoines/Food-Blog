@@ -2,7 +2,7 @@
   <div id="app" class="bg-green-50">
     <HeaderComponent />
 
-    <div class="mt-32 mb-12">
+    <div class="mt-32 mb-12 mx-32">
       <RouterView />
     </div>
 
