@@ -1,4 +1,5 @@
 <template>
+  <router-link :to=" '/recipe/' + title">
     <div class="card-container">
       <img :src="image" :alt="altText" class="card-image">
       <div class="card-content">
@@ -9,6 +10,7 @@
         </div>
       </div>
     </div>
+  </router-link>
 </template>
 
 <script>
@@ -85,13 +87,15 @@ export default {
 /* Media Query for Small Screens */
 @media screen and (max-width: 768px) {
   .card-container {
-    flex-direction: column; /* Stack elements vertically on smaller screens */
+    flex-direction: column;
+    /* Stack elements vertically on smaller screens */
     max-width: 100%;
     margin: 2% 0;
   }
 
   .card-image {
-    max-height: 100%; /* Adjusted for responsiveness */
+    max-height: 100%;
+    /* Adjusted for responsiveness */
   }
 }
 </style>
