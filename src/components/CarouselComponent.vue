@@ -49,32 +49,7 @@ export default {
                     title: 'Delicious Dish 5',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                     image: '/placeholders/food5.jpg',
-                },
-                {
-                    title: 'Delicious Dish 6',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food6.jpg',
-                },
-                {
-                    title: 'Delicious Dish 7',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food7.jpg',
-                },
-                {
-                    title: 'Delicious Dish 8',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food8.jpg',
-                },
-                {
-                    title: 'Delicious Dish 9',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food9.jpg',
-                },
-                {
-                    title: 'Delicious Dish 10',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food10.jpg',
-                },
+                }
             ],
             currentIndex: 0,
             itemWidth: 0,
