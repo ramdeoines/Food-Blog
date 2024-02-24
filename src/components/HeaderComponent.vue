@@ -3,10 +3,8 @@
     <div class="container mx-auto flex flex-row items-center justify-between">
 
       <!-- Logo -->
-      <router-link to="/" class="logo-container">
-        <div class="flex items-center">
-          <img src="@/assets/blog_logo.png" alt="Blog Logo" class="logo-img">
-        </div>
+      <router-link to="/" class="flex items-center space-x-2">
+        <img src="@/assets/blog_logo.png" alt="Blog Logo" class="w-16 h-auto rounded-md transition-transform transform hover:scale-110">
       </router-link>
 
       <!-- Navigation buttons -->
@@ -25,23 +23,3 @@
     </div>
   </header>
 </template>
-
-<style scoped>
-/* Adjust the logo's position */
-.logo-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.logo-img {
-  width: 4rem;
-  height: auto;
-  border-radius: 0.375rem;
-  transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-  transform: scale(1.1);
-}
-</style>

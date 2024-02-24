@@ -49,7 +49,7 @@ export default {
                     title: 'Delicious Dish 5',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
                     image: '/placeholders/food5.jpg',
-                }
+                },
             ],
             currentIndex: 0,
             itemWidth: 0,
