@@ -4,12 +4,13 @@
 
       <!-- Logo -->
       <router-link to="/" class="flex items-center space-x-2">
-        <img src="@/assets/blog_logo.png" alt="Blog Logo" class="w-16 h-auto rounded-md transition-transform transform hover:scale-110">
+        <img src="@/assets/blog_logo.png" alt="Blog Logo" class="w-20 h-auto rounded-md transition-transform transform hover:scale-110
+        mr-10 mt-5 border-2 border-white">
       </router-link>
 
       <!-- Navigation buttons -->
       <nav class="flex items-center space-x-4 justify-end">
-        <router-link to="/" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">
+        <router-link to="/" class="font-bold m-2 text-base sm:text-lg md:text-xl hover:text-gray-300">
           Home
         </router-link>
         <router-link to="/blogs" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">

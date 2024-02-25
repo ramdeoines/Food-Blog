@@ -62,34 +62,6 @@ export default {
           image: '/placeholders/blog6.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
-        },
-        {
-          title: 'Title',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '/placeholders/blog7.jpg',
-          altText: 'Alternate text',
-          tags: ['#photography', '#travel', '#winter']
-        },
-        {
-          title: 'Title',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '/placeholders/blog8.jpg',
-          altText: 'Alternate text',
-          tags: ['#photography', '#travel', '#winter']
-        },
-        {
-          title: 'Title',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '/placeholders/blog9.jpg',
-          altText: 'Alternate text',
-          tags: ['#photography', '#travel', '#winter']
-        },
-        {
-          title: 'Title',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
-          image: '/placeholders/blog10.jpg',
-          altText: 'Alternate text',
-          tags: ['#photography', '#travel', '#winter']
         }
       ]
     };

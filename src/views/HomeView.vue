@@ -2,7 +2,7 @@
   <div>
     <!-- Header Section -->
     <header class="p-4">
-      <h1 class="text-4xl font-bold">Tasty Tales</h1>
+      <h1 class="text-4xl font-bold mt-5 mr-10">Tasty Tales</h1>
       <p class="text-lg font-semibold">Exploring the world of delicious food</p>
     </header>
 
