@@ -8,7 +8,7 @@
 
     <!-- Featured Posts Section -->
     <section class="my-8">
-      <h2 class="text-2xl font-bold mb-4">Featured Posts</h2>
+      <h2 class="text-2xl font-bold mb-4 ml-5">Featured Posts</h2>
       <!-- Featured Posts Carousel -->
       <carousel-component></carousel-component>
     </section>
@@ -58,5 +58,3 @@ export default {
   },
 };
 </script>
-
-<style scoped></style>

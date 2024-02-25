@@ -10,13 +10,13 @@
 
       <!-- Navigation buttons -->
       <nav class="flex items-center space-x-4 justify-end">
-        <router-link to="/" class="font-bold m-2 text-base sm:text-lg md:text-xl hover:text-gray-300">
+        <router-link to="/" class="font-bold ml-2 text-xl sm:text-2xl md:text-3xl hover:text-gray-300">
           Home
         </router-link>
-        <router-link to="/blogs" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">
+        <router-link to="/blogs" class="font-bold mr-3 text-xl sm:text-2xl md:text-3xl hover:text-gray-300">
           Blogs
         </router-link>
-        <router-link to="/about" class="font-bold m-4 text-base sm:text-lg md:text-xl hover:text-gray-300">
+        <router-link to="/about" class="font-bold m-2 text-xl sm:text-2xl md:text-3xl hover:text-gray-300">
           About
         </router-link>
       </nav>
