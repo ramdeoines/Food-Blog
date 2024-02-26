@@ -26,18 +26,18 @@ export default {
         return {
             posts: [
                 {
-                    title: 'Delicious Dish 1',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    title: 'Explore',
+                    description: 'Passionate about food? Dedicated to quality? Discover the heart and soul behind our culinary journey.',
                     image: '/placeholders/carousel_image1.jpg',
                 },
                 {
-                    title: 'Delicious Dish 2',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    title: 'Discuss',
+                    description: 'Indulge in a symphony of tastes with us. Dive into deliciously delightful details.',
                     image: '/placeholders/carousel_image2.jpg',
                 },
                 {
-                    title: 'Delicious Dish 3',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    title: 'Travel',
+                    description: 'Elevate your experiences and find out new fantastic flavors from around the world.',
                     image: '/placeholders/carousel_image3.jpg',
                 }
             ],
@@ -129,9 +129,8 @@ export default {
     display:flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    width:auto;
+    height: 500px;
     overflow: hidden;
 }
 

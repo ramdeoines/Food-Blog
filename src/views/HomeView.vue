@@ -32,22 +32,22 @@ export default {
     return {
       recentPosts: [
         {
-          title: 'Amazing Recipe 1',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          title: 'Right Recommendations',
+          description: 'Blend of global tastes, creating a symphony for your taste buds. Experience a culinary journey that transcends borders.',
           image: '/placeholders/home1.jpg',
           tags: ['recipe', 'cooking', 'delicious'],
         },
         {
-          title: 'Amazing Recipe 2',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          title: 'Deep Delights',
+          description: 'Oceanic delights await! Immerse yourself in a seafood paradise with our expertly prepared dishes, a tribute to the treasures of the sea.',
           image: '/placeholders/home2.jpg',
-          tags: ['recipe', 'cooking', 'delicious'],
+          tags: ['seafood', 'exotic', 'amazing'],
         },
         {
-          title: 'Amazing Recipe 3',
-          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          title: 'Spicy Sensations',
+          description: 'Embark on a journey of spices! Our dishes are a celebration of bold flavors, promising a culinary adventure that ignites your senses.',
           image: '/placeholders/home3.png',
-          tags: ['recipe', 'cooking', 'delicious'],
+          tags: ['spicy', 'travel', 'wonderful'],
         },
       ],
     };
