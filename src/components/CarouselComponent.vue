@@ -28,28 +28,18 @@ export default {
                 {
                     title: 'Delicious Dish 1',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food1.jpg',
+                    image: '/placeholders/carousel_image1.jpg',
                 },
                 {
                     title: 'Delicious Dish 2',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food2.jpg',
+                    image: '/placeholders/carousel_image2.jpg',
                 },
                 {
                     title: 'Delicious Dish 3',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food3.jpg',
-                },
-                {
-                    title: 'Delicious Dish 4',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food4.jpg',
-                },
-                {
-                    title: 'Delicious Dish 5',
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    image: '/placeholders/food5.jpg',
-                },
+                    image: '/placeholders/carousel_image3.jpg',
+                }
             ],
             currentIndex: 0,
             itemWidth: 0,
@@ -84,7 +74,6 @@ export default {
 </script>
 
 <style scoped>
-/* Add Tailwind CSS styles specific to your carousel */
 .carousel-container {
   max-width: 76%; /* Set your desired maximum width */
   margin: 0 auto; /* Center the carousel */
@@ -109,9 +98,9 @@ export default {
 
 .carousel-item img {
     width: 100%;
-    max-width: 50%; /* Ensure images scale with the width of their container */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Remove any residual bottom spacing */
+    height: auto;
+    object-fit: cover;
+    display: block;
 }
 
 .carousel-btn {
@@ -140,8 +129,10 @@ export default {
     display:flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    height: auto; /* Ensure the container takes the full height of the image */
-    width: auto;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
 }
 
 .overlay {
