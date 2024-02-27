@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto my-8 p-4 flex flex-col items-center">
     <!-- Profile Picture -->
-    <img src="/placeholders/smiling_chef.jpg" alt="Placeholder Profile Pic" class="w-24 h-24 rounded-full object-cover mb-4">
+    <img src="/placeholders/smiling_chef.jpg" alt="Placeholder Profile Pic" class="w-64 h-64 rounded-full object-cover mb-4">
 
     <h1 class="text-3xl font-bold mb-4">About Tasty Tales</h1>
     
@@ -33,6 +33,5 @@
 <script>
 export default {
   name: 'AboutPage',
-  // Add any additional data or methods as needed
 }
 </script>

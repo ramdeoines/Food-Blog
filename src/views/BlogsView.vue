@@ -36,8 +36,8 @@ export default {
           tags: ['#sweet', '#suprise', '#treats']
         },
         {
-          title: 'Title',
-          content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
+          title: 'Crunch Munch',
+          content: 'From the golden crackle of well-seasoned fried chicken to the satisfying snap of fresh vegetables, crunchy sensations elevate dishes to new heights.',
           image: '/placeholders/blog3.jpg',
           altText: 'Alternate text',
           tags: ['#photography', '#travel', '#winter']
